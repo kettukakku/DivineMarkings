@@ -1,64 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Divine Markings</title>
-    <link rel="stylesheet" href="main.css">
-</head>
+    <link rel="stylesheet" href="main.css" />
+  </head>
 
-<body>
+  <body>
     <header><h1>Divine Markings</h1></header>
     <div class="navbar">
-        <ul>
-            <li onclick="startNewGame()">Play</li>
-            <li>About</li>
-        </ul>
+      <ul>
+        <li onclick="startNewGame()" class="play-button"><h2>Play</h2></li>
+      </ul>
     </div>
-
-    <div class="hero">
-        <h2>Title</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore culpa suscipit pariatur commodi asperiores, accusamus, perspiciatis placeat ut voluptatem reprehenderit rem quaerat, sint hic recusandae! Obcaecati magnam quo explicabo beatae.</p>
-    </div>
-
     <div class="game-container">
-        <div id="level-text"><h3>Level 1</h3></div>
-        <div class="healthbars-container">
-            <div class="healthbar" id="player-healthbar">
-                <div class="health-text">100%</div>
-            </div>
-            <div class="healthbar" id="enemy-healthbar">
-                <div class="health-text">100%</div>
-            </div>
+      <div id="level-text"><h3>Level 1</h3></div>
+      <div class="healthbars-container">
+        <div class="healthbar" id="player-healthbar">
+          <div class="health-text">100%</div>
         </div>
+        <div class="healthbar" id="enemy-healthbar">
+          <div class="health-text">100%</div>
+        </div>
+      </div>
 
-        <div class="sprites-container">
-            <div class="sprite" id="player-sprite">
-
-            </div>
-            <div class="sprite" id="enemy-sprite">
-
-            </div>
+      <div class="sprites-container">
+        <div class="sprite" id="player-sprite"></div>
+        <div class="sprite" id="enemy-sprite"></div>
+      </div>
+      <div id="tooltip">
+        <p>Click 'Play' to start a new game!</p>
+      </div>
+      <div id="glyph-container" class="greyed-out">
+        <div class="glyph" onclick="getPlayerChoice('warding')">
+          <h3>Warding</h3>
         </div>
-        <div id="tooltip">
-            <p>Click 'Play' to start a new game!</p>
+        <div class="glyph" onclick="getPlayerChoice('insight')">
+          <h3>Insight</h3>
         </div>
-        <div id="glyph-container" class="greyed-out">
-            <div class="glyph" onclick="getPlayerChoice('warding')">
-                <h3>Warding</h3>
-            </div>
-            <div class="glyph" onclick="getPlayerChoice('insight')">
-                <h3>Insight</h3>
-            </div>
-            <div class="glyph" onclick="getPlayerChoice('fury')">
-                <h3>Fury</h3>
-            </div>
+        <div class="glyph" onclick="getPlayerChoice('fury')">
+          <h3>Fury</h3>
         </div>
+      </div>
     </div>
     <footer>
-        <p>Copyright &copy CozyCat Games</p>
+      <p>Copyright &copy CozyCat Games</p>
     </footer>
-</body>
-    <script src="main.js"></script>
+  </body>
+  <script src="main.js"></script>
 </html>
